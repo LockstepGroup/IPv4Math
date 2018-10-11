@@ -1,0 +1,1263 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<helpItems schema="maml" xmlns="http://msh">
+  <command:command xmlns:maml="http://schemas.microsoft.com/maml/2004/10" xmlns:command="http://schemas.microsoft.com/maml/dev/command/2004/10" xmlns:dev="http://schemas.microsoft.com/maml/dev/2004/10" xmlns:MSHelp="http://msdn.microsoft.com/mshelp">
+    <command:details>
+      <command:name>ConvertTo-BinaryIP</command:name>
+      <command:verb>ConvertTo</command:verb>
+      <command:noun>BinaryIP</command:noun>
+      <maml:description>
+        <maml:para>Converts a Decimal IP address into a binary format.</maml:para>
+      </maml:description>
+    </command:details>
+    <maml:description>
+      <maml:para>ConvertTo-BinaryIP uses System.Convert to switch between decimal and binary format. The output from this function is dotted binary string.</maml:para>
+    </maml:description>
+    <command:syntax>
+      <command:syntaxItem>
+        <maml:name>ConvertTo-BinaryIP</maml:name>
+        <command:parameter required="true" variableLength="true" globbing="false" pipelineInput="True (ByValue)" position="0" aliases="none">
+          <maml:name>IPAddress</maml:name>
+          <maml:Description>
+            <maml:para>An IP Address to convert.</maml:para>
+          </maml:Description>
+          <command:parameterValue required="true" variableLength="false">IPAddress</command:parameterValue>
+          <dev:type>
+            <maml:name>IPAddress</maml:name>
+            <maml:uri />
+          </dev:type>
+          <dev:defaultValue>None</dev:defaultValue>
+        </command:parameter>
+      </command:syntaxItem>
+    </command:syntax>
+    <command:parameters>
+      <command:parameter required="true" variableLength="true" globbing="false" pipelineInput="True (ByValue)" position="0" aliases="none">
+        <maml:name>IPAddress</maml:name>
+        <maml:Description>
+          <maml:para>An IP Address to convert.</maml:para>
+        </maml:Description>
+        <command:parameterValue required="true" variableLength="false">IPAddress</command:parameterValue>
+        <dev:type>
+          <maml:name>IPAddress</maml:name>
+          <maml:uri />
+        </dev:type>
+        <dev:defaultValue>None</dev:defaultValue>
+      </command:parameter>
+    </command:parameters>
+    <command:inputTypes />
+    <command:returnValues />
+    <maml:alertSet>
+      <maml:alert>
+        <maml:para></maml:para>
+      </maml:alert>
+    </maml:alertSet>
+    <command:examples>
+      <command:example>
+        <maml:title>-------------------------- Example 1 --------------------------</maml:title>
+        <dev:code>PS C:\&gt; ConvertTo-BinaryIP 192.168.0.1
+11000000.10101000.00000000.00000001</dev:code>
+        <dev:remarks>
+          <maml:para>Converts 192.168.0.1 to a dotted binary format.</maml:para>
+        </dev:remarks>
+      </command:example>
+    </command:examples>
+    <command:relatedLinks>
+      <maml:navigationLink>
+        <maml:linkText>Online Version:</maml:linkText>
+        <maml:uri>https://github.com/LockstepGroup/IPv4Math/blob/master/docs/ConvertTo-BinaryIp.md</maml:uri>
+      </maml:navigationLink>
+      <maml:navigationLink>
+        <maml:linkText>https://github.com/LockstepGroup/IPv4Math</maml:linkText>
+        <maml:uri>https://github.com/LockstepGroup/IPv4Math</maml:uri>
+      </maml:navigationLink>
+      <maml:navigationLink>
+        <maml:linkText>https://www.powershellgallery.com/packages/IPv4Math</maml:linkText>
+        <maml:uri>https://www.powershellgallery.com/packages/IPv4Math</maml:uri>
+      </maml:navigationLink>
+    </command:relatedLinks>
+  </command:command>
+  <command:command xmlns:maml="http://schemas.microsoft.com/maml/2004/10" xmlns:command="http://schemas.microsoft.com/maml/dev/command/2004/10" xmlns:dev="http://schemas.microsoft.com/maml/dev/2004/10" xmlns:MSHelp="http://msdn.microsoft.com/mshelp">
+    <command:details>
+      <command:name>ConvertTo-DecimalIP</command:name>
+      <command:verb>ConvertTo</command:verb>
+      <command:noun>DecimalIP</command:noun>
+      <maml:description>
+        <maml:para>Converts a Decimal IP address into a 32-bit unsigned integer.</maml:para>
+      </maml:description>
+    </command:details>
+    <maml:description>
+      <maml:para>ConvertTo-DecimalIP takes a decimal IP, uses a shift-like operation on each octet and returns a single UInt32 value.</maml:para>
+    </maml:description>
+    <command:syntax>
+      <command:syntaxItem>
+        <maml:name>ConvertTo-DecimalIP</maml:name>
+        <command:parameter required="true" variableLength="true" globbing="false" pipelineInput="True (ByValue)" position="0" aliases="none">
+          <maml:name>IPAddress</maml:name>
+          <maml:Description>
+            <maml:para>An IP Address to convert.</maml:para>
+          </maml:Description>
+          <command:parameterValue required="true" variableLength="false">IPAddress</command:parameterValue>
+          <dev:type>
+            <maml:name>IPAddress</maml:name>
+            <maml:uri />
+          </dev:type>
+          <dev:defaultValue>None</dev:defaultValue>
+        </command:parameter>
+      </command:syntaxItem>
+    </command:syntax>
+    <command:parameters>
+      <command:parameter required="true" variableLength="true" globbing="false" pipelineInput="True (ByValue)" position="0" aliases="none">
+        <maml:name>IPAddress</maml:name>
+        <maml:Description>
+          <maml:para>An IP Address to convert.</maml:para>
+        </maml:Description>
+        <command:parameterValue required="true" variableLength="false">IPAddress</command:parameterValue>
+        <dev:type>
+          <maml:name>IPAddress</maml:name>
+          <maml:uri />
+        </dev:type>
+        <dev:defaultValue>None</dev:defaultValue>
+      </command:parameter>
+    </command:parameters>
+    <command:inputTypes />
+    <command:returnValues />
+    <maml:alertSet>
+      <maml:alert>
+        <maml:para></maml:para>
+      </maml:alert>
+    </maml:alertSet>
+    <command:examples>
+      <command:example>
+        <maml:title>-------------------------- Example 1 --------------------------</maml:title>
+        <dev:code>PS C:\&gt; ConvertTo-DecimalIP 192.168.0.1
+3232235521</dev:code>
+        <dev:remarks>
+          <maml:para>Converts 192.168.0.1 to a decimal format.</maml:para>
+        </dev:remarks>
+      </command:example>
+    </command:examples>
+    <command:relatedLinks>
+      <maml:navigationLink>
+        <maml:linkText>Online Version:</maml:linkText>
+        <maml:uri>https://github.com/LockstepGroup/IPv4Math/blob/master/docs/ConvertTo-DecimalIP.md</maml:uri>
+      </maml:navigationLink>
+      <maml:navigationLink>
+        <maml:linkText>https://github.com/LockstepGroup/IPv4Math</maml:linkText>
+        <maml:uri>https://github.com/LockstepGroup/IPv4Math</maml:uri>
+      </maml:navigationLink>
+      <maml:navigationLink>
+        <maml:linkText>https://www.powershellgallery.com/packages/IPv4Math</maml:linkText>
+        <maml:uri>https://www.powershellgallery.com/packages/IPv4Math</maml:uri>
+      </maml:navigationLink>
+    </command:relatedLinks>
+  </command:command>
+  <command:command xmlns:maml="http://schemas.microsoft.com/maml/2004/10" xmlns:command="http://schemas.microsoft.com/maml/dev/command/2004/10" xmlns:dev="http://schemas.microsoft.com/maml/dev/2004/10" xmlns:MSHelp="http://msdn.microsoft.com/mshelp">
+    <command:details>
+      <command:name>ConvertTo-DottedDecimalIP</command:name>
+      <command:verb>ConvertTo</command:verb>
+      <command:noun>DottedDecimalIP</command:noun>
+      <maml:description>
+        <maml:para>Returns a dotted decimal IP address from either an unsigned 32-bit integer or a dotted binary string.</maml:para>
+      </maml:description>
+    </command:details>
+    <maml:description>
+      <maml:para>ConvertTo-DottedDecimalIP uses a regular expression match on the input string to convert to an IP address.</maml:para>
+    </maml:description>
+    <command:syntax>
+      <command:syntaxItem>
+        <maml:name>ConvertTo-DottedDecimalIP</maml:name>
+        <command:parameter required="true" variableLength="true" globbing="false" pipelineInput="True (ByValue)" position="0" aliases="none">
+          <maml:name>IPAddress</maml:name>
+          <maml:Description>
+            <maml:para>A string representation of an IP address from either UInt32 or dotted binary.</maml:para>
+          </maml:Description>
+          <command:parameterValue required="true" variableLength="false">String</command:parameterValue>
+          <dev:type>
+            <maml:name>String</maml:name>
+            <maml:uri />
+          </dev:type>
+          <dev:defaultValue>None</dev:defaultValue>
+        </command:parameter>
+      </command:syntaxItem>
+    </command:syntax>
+    <command:parameters>
+      <command:parameter required="true" variableLength="true" globbing="false" pipelineInput="True (ByValue)" position="0" aliases="none">
+        <maml:name>IPAddress</maml:name>
+        <maml:Description>
+          <maml:para>A string representation of an IP address from either UInt32 or dotted binary.</maml:para>
+        </maml:Description>
+        <command:parameterValue required="true" variableLength="false">String</command:parameterValue>
+        <dev:type>
+          <maml:name>String</maml:name>
+          <maml:uri />
+        </dev:type>
+        <dev:defaultValue>None</dev:defaultValue>
+      </command:parameter>
+    </command:parameters>
+    <command:inputTypes />
+    <command:returnValues />
+    <maml:alertSet>
+      <maml:alert>
+        <maml:para></maml:para>
+      </maml:alert>
+    </maml:alertSet>
+    <command:examples>
+      <command:example>
+        <maml:title>-------------------------- Example 1 --------------------------</maml:title>
+        <dev:code>PS C:\&gt; ConvertTo-DottedDecimalIP 3232235521
+192.168.0.1</dev:code>
+        <dev:remarks>
+          <maml:para>Converts a decimal IP to Dotted Decimal IP.</maml:para>
+        </dev:remarks>
+      </command:example>
+      <command:example>
+        <maml:title>-------------------------- Example 2 --------------------------</maml:title>
+        <dev:code>PS C:\&gt; ConvertTo-DottedDecimalIP '11000000.10101000.00000000.00000001'
+192.168.0.1</dev:code>
+        <dev:remarks>
+          <maml:para>Converts a Binary IP to Dotted Decimal IP.</maml:para>
+        </dev:remarks>
+      </command:example>
+    </command:examples>
+    <command:relatedLinks>
+      <maml:navigationLink>
+        <maml:linkText>Online Version:</maml:linkText>
+        <maml:uri>https://github.com/LockstepGroup/IPv4Math/blob/master/docs/ConvertTo-DottedDecimnalIP.md</maml:uri>
+      </maml:navigationLink>
+      <maml:navigationLink>
+        <maml:linkText>https://github.com/LockstepGroup/IPv4Math</maml:linkText>
+        <maml:uri>https://github.com/LockstepGroup/IPv4Math</maml:uri>
+      </maml:navigationLink>
+      <maml:navigationLink>
+        <maml:linkText>https://www.powershellgallery.com/packages/IPv4Math</maml:linkText>
+        <maml:uri>https://www.powershellgallery.com/packages/IPv4Math</maml:uri>
+      </maml:navigationLink>
+    </command:relatedLinks>
+  </command:command>
+  <command:command xmlns:maml="http://schemas.microsoft.com/maml/2004/10" xmlns:command="http://schemas.microsoft.com/maml/dev/command/2004/10" xmlns:dev="http://schemas.microsoft.com/maml/dev/2004/10" xmlns:MSHelp="http://msdn.microsoft.com/mshelp">
+    <command:details>
+      <command:name>ConvertTo-Mask</command:name>
+      <command:verb>ConvertTo</command:verb>
+      <command:noun>Mask</command:noun>
+      <maml:description>
+        <maml:para>Returns a dotted decimal subnet mask from a mask length.</maml:para>
+      </maml:description>
+    </command:details>
+    <maml:description>
+      <maml:para>ConvertTo-Mask returns a subnet mask in dotted decimal format from an integer value ranging between 0 and 32. ConvertTo-Mask first creates a binary string from the length, converts that to an unsigned 32-bit integer then calls ConvertTo-DottedDecimalIP to complete the operation.</maml:para>
+    </maml:description>
+    <command:syntax>
+      <command:syntaxItem>
+        <maml:name>ConvertTo-Mask</maml:name>
+        <command:parameter required="true" variableLength="true" globbing="false" pipelineInput="True (ByValue)" position="0" aliases="Length">
+          <maml:name>MaskLength</maml:name>
+          <maml:Description>
+            <maml:para>The number of bits which must be masked.</maml:para>
+          </maml:Description>
+          <command:parameterValue required="true" variableLength="false">Object</command:parameterValue>
+          <dev:type>
+            <maml:name>Object</maml:name>
+            <maml:uri />
+          </dev:type>
+          <dev:defaultValue>None</dev:defaultValue>
+        </command:parameter>
+      </command:syntaxItem>
+    </command:syntax>
+    <command:parameters>
+      <command:parameter required="true" variableLength="true" globbing="false" pipelineInput="True (ByValue)" position="0" aliases="Length">
+        <maml:name>MaskLength</maml:name>
+        <maml:Description>
+          <maml:para>The number of bits which must be masked.</maml:para>
+        </maml:Description>
+        <command:parameterValue required="true" variableLength="false">Object</command:parameterValue>
+        <dev:type>
+          <maml:name>Object</maml:name>
+          <maml:uri />
+        </dev:type>
+        <dev:defaultValue>None</dev:defaultValue>
+      </command:parameter>
+    </command:parameters>
+    <command:inputTypes />
+    <command:returnValues />
+    <maml:alertSet>
+      <maml:alert>
+        <maml:para></maml:para>
+      </maml:alert>
+    </maml:alertSet>
+    <command:examples>
+      <command:example>
+        <maml:title>-------------------------- Example 1 --------------------------</maml:title>
+        <dev:code>PS C:\&gt; ConvertTo-MaskLength 255.128.0.0
+9</dev:code>
+        <dev:remarks>
+          <maml:para>Converts valid Subnet Mask 255.128.0.0 to mask length 9.</maml:para>
+        </dev:remarks>
+      </command:example>
+    </command:examples>
+    <command:relatedLinks>
+      <maml:navigationLink>
+        <maml:linkText>Online Version:</maml:linkText>
+        <maml:uri>https://github.com/LockstepGroup/IPv4Math/blob/master/docs/ConvertTo-Mask.md</maml:uri>
+      </maml:navigationLink>
+      <maml:navigationLink>
+        <maml:linkText>https://github.com/LockstepGroup/IPv4Math</maml:linkText>
+        <maml:uri>https://github.com/LockstepGroup/IPv4Math</maml:uri>
+      </maml:navigationLink>
+      <maml:navigationLink>
+        <maml:linkText>https://www.powershellgallery.com/packages/IPv4Math</maml:linkText>
+        <maml:uri>https://www.powershellgallery.com/packages/IPv4Math</maml:uri>
+      </maml:navigationLink>
+    </command:relatedLinks>
+  </command:command>
+  <command:command xmlns:maml="http://schemas.microsoft.com/maml/2004/10" xmlns:command="http://schemas.microsoft.com/maml/dev/command/2004/10" xmlns:dev="http://schemas.microsoft.com/maml/dev/2004/10" xmlns:MSHelp="http://msdn.microsoft.com/mshelp">
+    <command:details>
+      <command:name>ConvertTo-MaskLength</command:name>
+      <command:verb>ConvertTo</command:verb>
+      <command:noun>MaskLength</command:noun>
+      <maml:description>
+        <maml:para>Returns the length of a subnet mask.</maml:para>
+      </maml:description>
+    </command:details>
+    <maml:description>
+      <maml:para>ConvertTo-MaskLength accepts any IPv4 address as input, however the output value only makes sense when using a subnet mask.</maml:para>
+    </maml:description>
+    <command:syntax>
+      <command:syntaxItem>
+        <maml:name>ConvertTo-MaskLength</maml:name>
+        <command:parameter required="true" variableLength="true" globbing="false" pipelineInput="True (ByValue)" position="0" aliases="Mask">
+          <maml:name>SubnetMask</maml:name>
+          <maml:Description>
+            <maml:para>A subnet mask to convert into length</maml:para>
+          </maml:Description>
+          <command:parameterValue required="true" variableLength="false">IPAddress</command:parameterValue>
+          <dev:type>
+            <maml:name>IPAddress</maml:name>
+            <maml:uri />
+          </dev:type>
+          <dev:defaultValue>None</dev:defaultValue>
+        </command:parameter>
+      </command:syntaxItem>
+    </command:syntax>
+    <command:parameters>
+      <command:parameter required="true" variableLength="true" globbing="false" pipelineInput="True (ByValue)" position="0" aliases="Mask">
+        <maml:name>SubnetMask</maml:name>
+        <maml:Description>
+          <maml:para>A subnet mask to convert into length</maml:para>
+        </maml:Description>
+        <command:parameterValue required="true" variableLength="false">IPAddress</command:parameterValue>
+        <dev:type>
+          <maml:name>IPAddress</maml:name>
+          <maml:uri />
+        </dev:type>
+        <dev:defaultValue>None</dev:defaultValue>
+      </command:parameter>
+    </command:parameters>
+    <command:inputTypes />
+    <command:returnValues />
+    <maml:alertSet>
+      <maml:alert>
+        <maml:para></maml:para>
+      </maml:alert>
+    </maml:alertSet>
+    <command:examples>
+      <command:example>
+        <maml:title>-------------------------- Example 1 --------------------------</maml:title>
+        <dev:code>PS C:\&gt; ConvertTo-MaskLength 255.128.0.0
+9</dev:code>
+        <dev:remarks>
+          <maml:para>Converts valid subnet mask 255.128.0.0 to mask length 9.</maml:para>
+        </dev:remarks>
+      </command:example>
+    </command:examples>
+    <command:relatedLinks>
+      <maml:navigationLink>
+        <maml:linkText>Online Version:</maml:linkText>
+        <maml:uri>https://github.com/LockstepGroup/IPv4Math/blob/master/docs/ConvertTo-MaskLength.md</maml:uri>
+      </maml:navigationLink>
+      <maml:navigationLink>
+        <maml:linkText>https://github.com/LockstepGroup/IPv4Math</maml:linkText>
+        <maml:uri>https://github.com/LockstepGroup/IPv4Math</maml:uri>
+      </maml:navigationLink>
+      <maml:navigationLink>
+        <maml:linkText>https://www.powershellgallery.com/packages/IPv4Math</maml:linkText>
+        <maml:uri>https://www.powershellgallery.com/packages/IPv4Math</maml:uri>
+      </maml:navigationLink>
+    </command:relatedLinks>
+  </command:command>
+  <command:command xmlns:maml="http://schemas.microsoft.com/maml/2004/10" xmlns:command="http://schemas.microsoft.com/maml/dev/command/2004/10" xmlns:dev="http://schemas.microsoft.com/maml/dev/2004/10" xmlns:MSHelp="http://msdn.microsoft.com/mshelp">
+    <command:details>
+      <command:name>Get-BroadcastAddress</command:name>
+      <command:verb>Get</command:verb>
+      <command:noun>BroadcastAddress</command:noun>
+      <maml:description>
+        <maml:para>Takes an IP address and subnet mask then calculates the broadcast address for the range.</maml:para>
+      </maml:description>
+    </command:details>
+    <maml:description>
+      <maml:para>Get-BroadcastAddress returns the broadcast address for a subnet by performing a bitwise AND operation against the decimal forms of the IP address and inverted subnet mask. Get-BroadcastAddress expects both the IP address and subnet mask in dotted decimal format.</maml:para>
+    </maml:description>
+    <command:syntax>
+      <command:syntaxItem>
+        <maml:name>Get-BroadcastAddress</maml:name>
+        <command:parameter required="true" variableLength="true" globbing="false" pipelineInput="True (ByValue)" position="1" aliases="none">
+          <maml:name>IPAddress</maml:name>
+          <maml:Description>
+            <maml:para>Any IP address within the network range.</maml:para>
+          </maml:Description>
+          <command:parameterValue required="true" variableLength="false">IPAddress</command:parameterValue>
+          <dev:type>
+            <maml:name>IPAddress</maml:name>
+            <maml:uri />
+          </dev:type>
+          <dev:defaultValue>None</dev:defaultValue>
+        </command:parameter>
+        <command:parameter required="true" variableLength="true" globbing="false" pipelineInput="False" position="2" aliases="Mask">
+          <maml:name>SubnetMask</maml:name>
+          <maml:Description>
+            <maml:para>The subnet mask for the network.</maml:para>
+          </maml:Description>
+          <command:parameterValue required="true" variableLength="false">IPAddress</command:parameterValue>
+          <dev:type>
+            <maml:name>IPAddress</maml:name>
+            <maml:uri />
+          </dev:type>
+          <dev:defaultValue>None</dev:defaultValue>
+        </command:parameter>
+      </command:syntaxItem>
+      <command:syntaxItem>
+        <maml:name>Get-BroadcastAddress</maml:name>
+        <command:parameter required="true" variableLength="true" globbing="false" pipelineInput="False" position="1" aliases="none">
+          <maml:name>IpAndMaskLength</maml:name>
+          <maml:Description>
+            <maml:para>CIDR formatted IP Address and Mask Length</maml:para>
+          </maml:Description>
+          <command:parameterValue required="true" variableLength="false">String</command:parameterValue>
+          <dev:type>
+            <maml:name>String</maml:name>
+            <maml:uri />
+          </dev:type>
+          <dev:defaultValue>None</dev:defaultValue>
+        </command:parameter>
+      </command:syntaxItem>
+    </command:syntax>
+    <command:parameters>
+      <command:parameter required="true" variableLength="true" globbing="false" pipelineInput="True (ByValue)" position="1" aliases="none">
+        <maml:name>IPAddress</maml:name>
+        <maml:Description>
+          <maml:para>Any IP address within the network range.</maml:para>
+        </maml:Description>
+        <command:parameterValue required="true" variableLength="false">IPAddress</command:parameterValue>
+        <dev:type>
+          <maml:name>IPAddress</maml:name>
+          <maml:uri />
+        </dev:type>
+        <dev:defaultValue>None</dev:defaultValue>
+      </command:parameter>
+      <command:parameter required="true" variableLength="true" globbing="false" pipelineInput="False" position="2" aliases="Mask">
+        <maml:name>SubnetMask</maml:name>
+        <maml:Description>
+          <maml:para>The subnet mask for the network.</maml:para>
+        </maml:Description>
+        <command:parameterValue required="true" variableLength="false">IPAddress</command:parameterValue>
+        <dev:type>
+          <maml:name>IPAddress</maml:name>
+          <maml:uri />
+        </dev:type>
+        <dev:defaultValue>None</dev:defaultValue>
+      </command:parameter>
+      <command:parameter required="true" variableLength="true" globbing="false" pipelineInput="False" position="1" aliases="none">
+        <maml:name>IpAndMaskLength</maml:name>
+        <maml:Description>
+          <maml:para>CIDR formatted IP Address and Mask Length</maml:para>
+        </maml:Description>
+        <command:parameterValue required="true" variableLength="false">String</command:parameterValue>
+        <dev:type>
+          <maml:name>String</maml:name>
+          <maml:uri />
+        </dev:type>
+        <dev:defaultValue>None</dev:defaultValue>
+      </command:parameter>
+    </command:parameters>
+    <command:inputTypes />
+    <command:returnValues />
+    <maml:alertSet>
+      <maml:alert>
+        <maml:para></maml:para>
+      </maml:alert>
+    </maml:alertSet>
+    <command:examples>
+      <command:example>
+        <maml:title>-------------------------- Example 1 --------------------------</maml:title>
+        <dev:code>PS C:\&gt; Get-BroadcastAddress -IPAddress 192.168.0.1 -SubnetMask 255.255.255.0
+192.168.0.255</dev:code>
+        <dev:remarks>
+          <maml:para>Returns the Broadcast Address for a given IP Address and Subnet Mask.</maml:para>
+        </dev:remarks>
+      </command:example>
+      <command:example>
+        <maml:title>-------------------------- Example 2 --------------------------</maml:title>
+        <dev:code>PS C:\&gt; Get-BroadcastAddress -IpAndMaskLength 192.168.0.1/24
+192.168.0.255</dev:code>
+        <dev:remarks>
+          <maml:para>Returns the Broadcast Address for a given IP Address and Subnet Mask.</maml:para>
+        </dev:remarks>
+      </command:example>
+    </command:examples>
+    <command:relatedLinks>
+      <maml:navigationLink>
+        <maml:linkText>Online Version:</maml:linkText>
+        <maml:uri>https://github.com/LockstepGroup/IPv4Math/blob/master/docs/Get-BroadcastAddress.md</maml:uri>
+      </maml:navigationLink>
+      <maml:navigationLink>
+        <maml:linkText>https://github.com/LockstepGroup/IPv4Math</maml:linkText>
+        <maml:uri>https://github.com/LockstepGroup/IPv4Math</maml:uri>
+      </maml:navigationLink>
+      <maml:navigationLink>
+        <maml:linkText>https://www.powershellgallery.com/packages/IPv4Math</maml:linkText>
+        <maml:uri>https://www.powershellgallery.com/packages/IPv4Math</maml:uri>
+      </maml:navigationLink>
+    </command:relatedLinks>
+  </command:command>
+  <command:command xmlns:maml="http://schemas.microsoft.com/maml/2004/10" xmlns:command="http://schemas.microsoft.com/maml/dev/command/2004/10" xmlns:dev="http://schemas.microsoft.com/maml/dev/2004/10" xmlns:MSHelp="http://msdn.microsoft.com/mshelp">
+    <command:details>
+      <command:name>Get-NetworkAddress</command:name>
+      <command:verb>Get</command:verb>
+      <command:noun>NetworkAddress</command:noun>
+      <maml:description>
+        <maml:para>Takes an IP address and subnet mask then calculates the network address for the range.</maml:para>
+      </maml:description>
+    </command:details>
+    <maml:description>
+      <maml:para>Get-NetworkAddress returns the network address for a subnet by performing a bitwise AND operation against the decimal forms of the IP address and subnet mask. Get-NetworkAddress expects both the IP address and subnet mask in dotted decimal format.</maml:para>
+    </maml:description>
+    <command:syntax>
+      <command:syntaxItem>
+        <maml:name>Get-NetworkAddress</maml:name>
+        <command:parameter required="true" variableLength="true" globbing="false" pipelineInput="True (ByValue)" position="0" aliases="none">
+          <maml:name>IPAddress</maml:name>
+          <maml:Description>
+            <maml:para>IP Address in Dotted Decimal format</maml:para>
+          </maml:Description>
+          <command:parameterValue required="true" variableLength="false">IPAddress</command:parameterValue>
+          <dev:type>
+            <maml:name>IPAddress</maml:name>
+            <maml:uri />
+          </dev:type>
+          <dev:defaultValue>None</dev:defaultValue>
+        </command:parameter>
+        <command:parameter required="true" variableLength="true" globbing="false" pipelineInput="False" position="1" aliases="Mask">
+          <maml:name>SubnetMask</maml:name>
+          <maml:Description>
+            <maml:para>The subnet mask for the network.</maml:para>
+          </maml:Description>
+          <command:parameterValue required="true" variableLength="false">IPAddress</command:parameterValue>
+          <dev:type>
+            <maml:name>IPAddress</maml:name>
+            <maml:uri />
+          </dev:type>
+          <dev:defaultValue>None</dev:defaultValue>
+        </command:parameter>
+      </command:syntaxItem>
+      <command:syntaxItem>
+        <maml:name>Get-NetworkAddress</maml:name>
+        <command:parameter required="true" variableLength="true" globbing="false" pipelineInput="False" position="0" aliases="none">
+          <maml:name>IpAndMaskLength</maml:name>
+          <maml:Description>
+            <maml:para>CIDR formatted IP Address and Mask Length</maml:para>
+          </maml:Description>
+          <command:parameterValue required="true" variableLength="false">String</command:parameterValue>
+          <dev:type>
+            <maml:name>String</maml:name>
+            <maml:uri />
+          </dev:type>
+          <dev:defaultValue>None</dev:defaultValue>
+        </command:parameter>
+      </command:syntaxItem>
+    </command:syntax>
+    <command:parameters>
+      <command:parameter required="true" variableLength="true" globbing="false" pipelineInput="True (ByValue)" position="0" aliases="none">
+        <maml:name>IPAddress</maml:name>
+        <maml:Description>
+          <maml:para>IP Address in Dotted Decimal format</maml:para>
+        </maml:Description>
+        <command:parameterValue required="true" variableLength="false">IPAddress</command:parameterValue>
+        <dev:type>
+          <maml:name>IPAddress</maml:name>
+          <maml:uri />
+        </dev:type>
+        <dev:defaultValue>None</dev:defaultValue>
+      </command:parameter>
+      <command:parameter required="true" variableLength="true" globbing="false" pipelineInput="False" position="0" aliases="none">
+        <maml:name>IpAndMaskLength</maml:name>
+        <maml:Description>
+          <maml:para>CIDR formatted IP Address and Mask Length</maml:para>
+        </maml:Description>
+        <command:parameterValue required="true" variableLength="false">String</command:parameterValue>
+        <dev:type>
+          <maml:name>String</maml:name>
+          <maml:uri />
+        </dev:type>
+        <dev:defaultValue>None</dev:defaultValue>
+      </command:parameter>
+      <command:parameter required="true" variableLength="true" globbing="false" pipelineInput="False" position="1" aliases="Mask">
+        <maml:name>SubnetMask</maml:name>
+        <maml:Description>
+          <maml:para>The subnet mask for the network.</maml:para>
+        </maml:Description>
+        <command:parameterValue required="true" variableLength="false">IPAddress</command:parameterValue>
+        <dev:type>
+          <maml:name>IPAddress</maml:name>
+          <maml:uri />
+        </dev:type>
+        <dev:defaultValue>None</dev:defaultValue>
+      </command:parameter>
+    </command:parameters>
+    <command:inputTypes />
+    <command:returnValues />
+    <maml:alertSet>
+      <maml:alert>
+        <maml:para></maml:para>
+      </maml:alert>
+    </maml:alertSet>
+    <command:examples>
+      <command:example>
+        <maml:title>-------------------------- Example 1 --------------------------</maml:title>
+        <dev:code>PS C:\&gt; Get-NetworkAddress -IPAddress 192.168.0.1 -SubnetMask 255.255.255.0
+192.168.0.0</dev:code>
+        <dev:remarks>
+          <maml:para>Returns the Network Address for a given IP Address and Subnet Mask.</maml:para>
+        </dev:remarks>
+      </command:example>
+      <command:example>
+        <maml:title>-------------------------- Example 2 --------------------------</maml:title>
+        <dev:code>PS C:\&gt; Get-NetworkAddress -IpAndMaskLength 192.168.0.1/24
+192.168.0.0</dev:code>
+        <dev:remarks>
+          <maml:para>Returns the Network Address for a given IP Address and Subnet Mask.</maml:para>
+        </dev:remarks>
+      </command:example>
+    </command:examples>
+    <command:relatedLinks>
+      <maml:navigationLink>
+        <maml:linkText>Online Version:</maml:linkText>
+        <maml:uri>https://github.com/LockstepGroup/IPv4Math/blob/master/docs/Get-NetworkAddress.md</maml:uri>
+      </maml:navigationLink>
+      <maml:navigationLink>
+        <maml:linkText>https://github.com/LockstepGroup/IPv4Math</maml:linkText>
+        <maml:uri>https://github.com/LockstepGroup/IPv4Math</maml:uri>
+      </maml:navigationLink>
+      <maml:navigationLink>
+        <maml:linkText>https://www.powershellgallery.com/packages/IPv4Math</maml:linkText>
+        <maml:uri>https://www.powershellgallery.com/packages/IPv4Math</maml:uri>
+      </maml:navigationLink>
+    </command:relatedLinks>
+  </command:command>
+  <command:command xmlns:maml="http://schemas.microsoft.com/maml/2004/10" xmlns:command="http://schemas.microsoft.com/maml/dev/command/2004/10" xmlns:dev="http://schemas.microsoft.com/maml/dev/2004/10" xmlns:MSHelp="http://msdn.microsoft.com/mshelp">
+    <command:details>
+      <command:name>Get-NetworkRange</command:name>
+      <command:verb>Get</command:verb>
+      <command:noun>NetworkRange</command:noun>
+      <maml:description>
+        <maml:para>Returns an array of IPs in a given network range.</maml:para>
+      </maml:description>
+    </command:details>
+    <maml:description>
+      <maml:para>Returns an array of IPs in a given network range.</maml:para>
+    </maml:description>
+    <command:syntax>
+      <command:syntaxItem>
+        <maml:name>Get-NetworkRange</maml:name>
+        <command:parameter required="true" variableLength="true" globbing="false" pipelineInput="True (ByValue)" position="0" aliases="none">
+          <maml:name>IPAddress</maml:name>
+          <maml:Description>
+            <maml:para>IP Address in Dotted Decimal Format</maml:para>
+          </maml:Description>
+          <command:parameterValue required="true" variableLength="false">IPAddress</command:parameterValue>
+          <dev:type>
+            <maml:name>IPAddress</maml:name>
+            <maml:uri />
+          </dev:type>
+          <dev:defaultValue>None</dev:defaultValue>
+        </command:parameter>
+        <command:parameter required="true" variableLength="true" globbing="false" pipelineInput="False" position="1" aliases="Mask">
+          <maml:name>SubnetMask</maml:name>
+          <maml:Description>
+            <maml:para>The subnet mask for the network</maml:para>
+          </maml:Description>
+          <command:parameterValue required="true" variableLength="false">IPAddress</command:parameterValue>
+          <dev:type>
+            <maml:name>IPAddress</maml:name>
+            <maml:uri />
+          </dev:type>
+          <dev:defaultValue>None</dev:defaultValue>
+        </command:parameter>
+      </command:syntaxItem>
+      <command:syntaxItem>
+        <maml:name>Get-NetworkRange</maml:name>
+        <command:parameter required="true" variableLength="true" globbing="false" pipelineInput="False" position="0" aliases="none">
+          <maml:name>IpAndMaskLength</maml:name>
+          <maml:Description>
+            <maml:para>CIDR formatted IP Address and Mask Length</maml:para>
+          </maml:Description>
+          <command:parameterValue required="true" variableLength="false">String</command:parameterValue>
+          <dev:type>
+            <maml:name>String</maml:name>
+            <maml:uri />
+          </dev:type>
+          <dev:defaultValue>None</dev:defaultValue>
+        </command:parameter>
+      </command:syntaxItem>
+      <command:syntaxItem>
+        <maml:name>Get-NetworkRange</maml:name>
+        <command:parameter required="true" variableLength="true" globbing="false" pipelineInput="False" position="0" aliases="none">
+          <maml:name>IpRange</maml:name>
+          <maml:Description>
+            <maml:para>Range of IPs separated by a hyphen (192.168.0.1-192.168.0.50)</maml:para>
+          </maml:Description>
+          <command:parameterValue required="true" variableLength="false">String</command:parameterValue>
+          <dev:type>
+            <maml:name>String</maml:name>
+            <maml:uri />
+          </dev:type>
+          <dev:defaultValue>None</dev:defaultValue>
+        </command:parameter>
+      </command:syntaxItem>
+    </command:syntax>
+    <command:parameters>
+      <command:parameter required="true" variableLength="true" globbing="false" pipelineInput="True (ByValue)" position="0" aliases="none">
+        <maml:name>IPAddress</maml:name>
+        <maml:Description>
+          <maml:para>IP Address in Dotted Decimal Format</maml:para>
+        </maml:Description>
+        <command:parameterValue required="true" variableLength="false">IPAddress</command:parameterValue>
+        <dev:type>
+          <maml:name>IPAddress</maml:name>
+          <maml:uri />
+        </dev:type>
+        <dev:defaultValue>None</dev:defaultValue>
+      </command:parameter>
+      <command:parameter required="true" variableLength="true" globbing="false" pipelineInput="False" position="0" aliases="none">
+        <maml:name>IpAndMaskLength</maml:name>
+        <maml:Description>
+          <maml:para>CIDR formatted IP Address and Mask Length</maml:para>
+        </maml:Description>
+        <command:parameterValue required="true" variableLength="false">String</command:parameterValue>
+        <dev:type>
+          <maml:name>String</maml:name>
+          <maml:uri />
+        </dev:type>
+        <dev:defaultValue>None</dev:defaultValue>
+      </command:parameter>
+      <command:parameter required="true" variableLength="true" globbing="false" pipelineInput="False" position="0" aliases="none">
+        <maml:name>IpRange</maml:name>
+        <maml:Description>
+          <maml:para>Range of IPs separated by a hyphen (192.168.0.1-192.168.0.50)</maml:para>
+        </maml:Description>
+        <command:parameterValue required="true" variableLength="false">String</command:parameterValue>
+        <dev:type>
+          <maml:name>String</maml:name>
+          <maml:uri />
+        </dev:type>
+        <dev:defaultValue>None</dev:defaultValue>
+      </command:parameter>
+      <command:parameter required="true" variableLength="true" globbing="false" pipelineInput="False" position="1" aliases="Mask">
+        <maml:name>SubnetMask</maml:name>
+        <maml:Description>
+          <maml:para>The subnet mask for the network</maml:para>
+        </maml:Description>
+        <command:parameterValue required="true" variableLength="false">IPAddress</command:parameterValue>
+        <dev:type>
+          <maml:name>IPAddress</maml:name>
+          <maml:uri />
+        </dev:type>
+        <dev:defaultValue>None</dev:defaultValue>
+      </command:parameter>
+    </command:parameters>
+    <command:inputTypes>
+      <command:inputType>
+        <dev:type>
+          <maml:name>System.Net.IPAddress</maml:name>
+        </dev:type>
+        <maml:description>
+          <maml:para></maml:para>
+        </maml:description>
+      </command:inputType>
+    </command:inputTypes>
+    <command:returnValues>
+      <command:returnValue>
+        <dev:type>
+          <maml:name>System.Object</maml:name>
+        </dev:type>
+        <maml:description>
+          <maml:para></maml:para>
+        </maml:description>
+      </command:returnValue>
+    </command:returnValues>
+    <maml:alertSet>
+      <maml:alert>
+        <maml:para></maml:para>
+      </maml:alert>
+    </maml:alertSet>
+    <command:examples>
+      <command:example>
+        <maml:title>-------------------------- Example 1 --------------------------</maml:title>
+        <dev:code>PS C:\&gt; Get-NetworkRange -IpAndMaskLength 192.168.0.0/30
+192.168.0.1
+192.168.0.2</dev:code>
+        <dev:remarks>
+          <maml:para>Returns IPAddresses in provided CIDR network.</maml:para>
+        </dev:remarks>
+      </command:example>
+      <command:example>
+        <maml:title>-------------------------- Example 2 --------------------------</maml:title>
+        <dev:code>PS C:\&gt; Get-NetworkRange -IpRange 192.168.0.0-192.168.0.4
+192.168.0.0
+192.168.0.1
+192.168.0.2
+192.168.0.3
+192.168.0.4</dev:code>
+        <dev:remarks>
+          <maml:para>Returns IPAddresses in provided network range.</maml:para>
+        </dev:remarks>
+      </command:example>
+      <command:example>
+        <maml:title>-------------------------- Example 3 --------------------------</maml:title>
+        <dev:code>PS C:\&gt; Get-NetworkRange -IPAddress 192.168.0.0 -SubnetMask 255.255.255.252
+192.168.0.1
+192.168.0.2</dev:code>
+        <dev:remarks>
+          <maml:para>Returns IPAddresses in provided IpAddress and SubnetMask.</maml:para>
+        </dev:remarks>
+      </command:example>
+    </command:examples>
+    <command:relatedLinks>
+      <maml:navigationLink>
+        <maml:linkText>Online Version:</maml:linkText>
+        <maml:uri>https://github.com/LockstepGroup/IPv4Math/blob/master/docs/Get-NetworkRange.md</maml:uri>
+      </maml:navigationLink>
+      <maml:navigationLink>
+        <maml:linkText>https://github.com/LockstepGroup/IPv4Math</maml:linkText>
+        <maml:uri>https://github.com/LockstepGroup/IPv4Math</maml:uri>
+      </maml:navigationLink>
+      <maml:navigationLink>
+        <maml:linkText>https://www.powershellgallery.com/packages/IPv4Math</maml:linkText>
+        <maml:uri>https://www.powershellgallery.com/packages/IPv4Math</maml:uri>
+      </maml:navigationLink>
+    </command:relatedLinks>
+  </command:command>
+  <command:command xmlns:maml="http://schemas.microsoft.com/maml/2004/10" xmlns:command="http://schemas.microsoft.com/maml/dev/command/2004/10" xmlns:dev="http://schemas.microsoft.com/maml/dev/2004/10" xmlns:MSHelp="http://msdn.microsoft.com/mshelp">
+    <command:details>
+      <command:name>Get-NetworkSummary</command:name>
+      <command:verb>Get</command:verb>
+      <command:noun>NetworkSummary</command:noun>
+      <maml:description>
+        <maml:para>Returns a network summary of the provided IPAddress and Subnet Mask.</maml:para>
+      </maml:description>
+    </command:details>
+    <maml:description>
+      <maml:para>Provides details for the provided network, including: Network Broadcast Range RangeStart RangeEnd Mask MaskLength Hosts Class IsPrivate</maml:para>
+    </maml:description>
+    <command:syntax>
+      <command:syntaxItem>
+        <maml:name>Get-NetworkSummary</maml:name>
+        <command:parameter required="true" variableLength="true" globbing="false" pipelineInput="True (ByValue)" position="0" aliases="none">
+          <maml:name>IPAddress</maml:name>
+          <maml:Description>
+            <maml:para>IP Address in Dotted Decimal Format</maml:para>
+          </maml:Description>
+          <command:parameterValue required="true" variableLength="false">IPAddress</command:parameterValue>
+          <dev:type>
+            <maml:name>IPAddress</maml:name>
+            <maml:uri />
+          </dev:type>
+          <dev:defaultValue>None</dev:defaultValue>
+        </command:parameter>
+        <command:parameter required="true" variableLength="true" globbing="false" pipelineInput="False" position="1" aliases="Mask">
+          <maml:name>SubnetMask</maml:name>
+          <maml:Description>
+            <maml:para>The subnet mask for the network</maml:para>
+          </maml:Description>
+          <command:parameterValue required="true" variableLength="false">IPAddress</command:parameterValue>
+          <dev:type>
+            <maml:name>IPAddress</maml:name>
+            <maml:uri />
+          </dev:type>
+          <dev:defaultValue>None</dev:defaultValue>
+        </command:parameter>
+      </command:syntaxItem>
+      <command:syntaxItem>
+        <maml:name>Get-NetworkSummary</maml:name>
+        <command:parameter required="true" variableLength="true" globbing="false" pipelineInput="False" position="0" aliases="none">
+          <maml:name>IpAndMaskLength</maml:name>
+          <maml:Description>
+            <maml:para>CIDR formatted IP Address and Mask Length</maml:para>
+          </maml:Description>
+          <command:parameterValue required="true" variableLength="false">String</command:parameterValue>
+          <dev:type>
+            <maml:name>String</maml:name>
+            <maml:uri />
+          </dev:type>
+          <dev:defaultValue>None</dev:defaultValue>
+        </command:parameter>
+      </command:syntaxItem>
+    </command:syntax>
+    <command:parameters>
+      <command:parameter required="true" variableLength="true" globbing="false" pipelineInput="True (ByValue)" position="0" aliases="none">
+        <maml:name>IPAddress</maml:name>
+        <maml:Description>
+          <maml:para>IP Address in Dotted Decimal Format</maml:para>
+        </maml:Description>
+        <command:parameterValue required="true" variableLength="false">IPAddress</command:parameterValue>
+        <dev:type>
+          <maml:name>IPAddress</maml:name>
+          <maml:uri />
+        </dev:type>
+        <dev:defaultValue>None</dev:defaultValue>
+      </command:parameter>
+      <command:parameter required="true" variableLength="true" globbing="false" pipelineInput="False" position="0" aliases="none">
+        <maml:name>IpAndMaskLength</maml:name>
+        <maml:Description>
+          <maml:para>CIDR formatted IP Address and Mask Length</maml:para>
+        </maml:Description>
+        <command:parameterValue required="true" variableLength="false">String</command:parameterValue>
+        <dev:type>
+          <maml:name>String</maml:name>
+          <maml:uri />
+        </dev:type>
+        <dev:defaultValue>None</dev:defaultValue>
+      </command:parameter>
+      <command:parameter required="true" variableLength="true" globbing="false" pipelineInput="False" position="1" aliases="Mask">
+        <maml:name>SubnetMask</maml:name>
+        <maml:Description>
+          <maml:para>The subnet mask for the network</maml:para>
+        </maml:Description>
+        <command:parameterValue required="true" variableLength="false">IPAddress</command:parameterValue>
+        <dev:type>
+          <maml:name>IPAddress</maml:name>
+          <maml:uri />
+        </dev:type>
+        <dev:defaultValue>None</dev:defaultValue>
+      </command:parameter>
+    </command:parameters>
+    <command:inputTypes>
+      <command:inputType>
+        <dev:type>
+          <maml:name>System.Net.IPAddress</maml:name>
+        </dev:type>
+        <maml:description>
+          <maml:para></maml:para>
+        </maml:description>
+      </command:inputType>
+    </command:inputTypes>
+    <command:returnValues>
+      <command:returnValue>
+        <dev:type>
+          <maml:name>System.Object</maml:name>
+        </dev:type>
+        <maml:description>
+          <maml:para></maml:para>
+        </maml:description>
+      </command:returnValue>
+    </command:returnValues>
+    <maml:alertSet>
+      <maml:alert>
+        <maml:para></maml:para>
+      </maml:alert>
+    </maml:alertSet>
+    <command:examples>
+      <command:example>
+        <maml:title>-------------------------- Example 1 --------------------------</maml:title>
+        <dev:code>PS C:\&gt; Get-NetworkSummary -IPAddress 192.168.0.1 -SubnetMask 255.255.255.0
+Network    : 192.168.0.0
+Broadcast  : 192.168.0.255
+Range      : 192.168.0.1 - 192.168.0.254
+RangeStart : 192.168.0.1
+RangeEnd   : 192.168.0.254
+Mask       : 255.255.255.0
+MaskLength : 24
+Hosts      : 254
+Class      : C
+IsPrivate  : True</dev:code>
+        <dev:remarks>
+          <maml:para>Returns the Network Summary for a given IP Address and Subnet Mask.</maml:para>
+        </dev:remarks>
+      </command:example>
+      <command:example>
+        <maml:title>-------------------------- Example 2 --------------------------</maml:title>
+        <dev:code>PS C:\&gt; Get-NetworkSummary -IpAndMaskLength 192.168.0.1/24
+Network    : 192.168.0.0
+Broadcast  : 192.168.0.255
+Range      : 192.168.0.1 - 192.168.0.254
+RangeStart : 192.168.0.1
+RangeEnd   : 192.168.0.254
+Mask       : 255.255.255.0
+MaskLength : 24
+Hosts      : 254
+Class      : C
+IsPrivate  : True</dev:code>
+        <dev:remarks>
+          <maml:para>Returns the Network Summary for a given IP Address and Subnet Mask.</maml:para>
+        </dev:remarks>
+      </command:example>
+    </command:examples>
+    <command:relatedLinks>
+      <maml:navigationLink>
+        <maml:linkText>Online Version:</maml:linkText>
+        <maml:uri>https://github.com/LockstepGroup/IPv4Math/blob/master/docs/Get-NetworkSummary.md</maml:uri>
+      </maml:navigationLink>
+      <maml:navigationLink>
+        <maml:linkText>https://github.com/LockstepGroup/IPv4Math</maml:linkText>
+        <maml:uri>https://github.com/LockstepGroup/IPv4Math</maml:uri>
+      </maml:navigationLink>
+      <maml:navigationLink>
+        <maml:linkText>https://www.powershellgallery.com/packages/IPv4Math</maml:linkText>
+        <maml:uri>https://www.powershellgallery.com/packages/IPv4Math</maml:uri>
+      </maml:navigationLink>
+    </command:relatedLinks>
+  </command:command>
+  <command:command xmlns:maml="http://schemas.microsoft.com/maml/2004/10" xmlns:command="http://schemas.microsoft.com/maml/dev/command/2004/10" xmlns:dev="http://schemas.microsoft.com/maml/dev/2004/10" xmlns:MSHelp="http://msdn.microsoft.com/mshelp">
+    <command:details>
+      <command:name>Test-IpInRange</command:name>
+      <command:verb>Test</command:verb>
+      <command:noun>IpInRange</command:noun>
+      <maml:description>
+        <maml:para>Tests to determine if a given IPAddress or Network is contained by another Network or Ip Range.</maml:para>
+      </maml:description>
+    </command:details>
+    <maml:description>
+      <maml:para>Tests to determine if a given IPAddress or Network is contained by another Network or Ip Range. Returns $true or $false</maml:para>
+    </maml:description>
+    <command:syntax>
+      <command:syntaxItem>
+        <maml:name>Test-IpInRange</maml:name>
+        <command:parameter required="true" variableLength="true" globbing="false" pipelineInput="False" position="0" aliases="none">
+          <maml:name>IpRange</maml:name>
+          <maml:Description>
+            <maml:para>Range of IPs separated by a hyphen (192.168.0.1-192.168.0.50)</maml:para>
+          </maml:Description>
+          <command:parameterValue required="true" variableLength="false">String</command:parameterValue>
+          <dev:type>
+            <maml:name>String</maml:name>
+            <maml:uri />
+          </dev:type>
+          <dev:defaultValue>None</dev:defaultValue>
+        </command:parameter>
+        <command:parameter required="true" variableLength="true" globbing="false" pipelineInput="False" position="1" aliases="none">
+          <maml:name>ContainedNetwork</maml:name>
+          <maml:Description>
+            <maml:para>CIDR network and mask length</maml:para>
+          </maml:Description>
+          <command:parameterValue required="true" variableLength="false">String</command:parameterValue>
+          <dev:type>
+            <maml:name>String</maml:name>
+            <maml:uri />
+          </dev:type>
+          <dev:defaultValue>None</dev:defaultValue>
+        </command:parameter>
+      </command:syntaxItem>
+      <command:syntaxItem>
+        <maml:name>Test-IpInRange</maml:name>
+        <command:parameter required="true" variableLength="true" globbing="false" pipelineInput="False" position="0" aliases="none">
+          <maml:name>ContainingNetwork</maml:name>
+          <maml:Description>
+            <maml:para>CIDR network and mask length</maml:para>
+          </maml:Description>
+          <command:parameterValue required="true" variableLength="false">String</command:parameterValue>
+          <dev:type>
+            <maml:name>String</maml:name>
+            <maml:uri />
+          </dev:type>
+          <dev:defaultValue>None</dev:defaultValue>
+        </command:parameter>
+        <command:parameter required="true" variableLength="true" globbing="false" pipelineInput="False" position="1" aliases="none">
+          <maml:name>ContainedNetwork</maml:name>
+          <maml:Description>
+            <maml:para>CIDR network and mask length</maml:para>
+          </maml:Description>
+          <command:parameterValue required="true" variableLength="false">String</command:parameterValue>
+          <dev:type>
+            <maml:name>String</maml:name>
+            <maml:uri />
+          </dev:type>
+          <dev:defaultValue>None</dev:defaultValue>
+        </command:parameter>
+      </command:syntaxItem>
+      <command:syntaxItem>
+        <maml:name>Test-IpInRange</maml:name>
+        <command:parameter required="true" variableLength="true" globbing="false" pipelineInput="False" position="0" aliases="none">
+          <maml:name>ContainingNetwork</maml:name>
+          <maml:Description>
+            <maml:para>CIDR network and mask length</maml:para>
+          </maml:Description>
+          <command:parameterValue required="true" variableLength="false">String</command:parameterValue>
+          <dev:type>
+            <maml:name>String</maml:name>
+            <maml:uri />
+          </dev:type>
+          <dev:defaultValue>None</dev:defaultValue>
+        </command:parameter>
+        <command:parameter required="true" variableLength="true" globbing="false" pipelineInput="False" position="1" aliases="none">
+          <maml:name>IPAddress</maml:name>
+          <maml:Description>
+            <maml:para>IPAddress in Dotted Decimal format</maml:para>
+          </maml:Description>
+          <command:parameterValue required="true" variableLength="false">IPAddress</command:parameterValue>
+          <dev:type>
+            <maml:name>IPAddress</maml:name>
+            <maml:uri />
+          </dev:type>
+          <dev:defaultValue>None</dev:defaultValue>
+        </command:parameter>
+      </command:syntaxItem>
+      <command:syntaxItem>
+        <maml:name>Test-IpInRange</maml:name>
+        <command:parameter required="true" variableLength="true" globbing="false" pipelineInput="False" position="0" aliases="none">
+          <maml:name>IpRange</maml:name>
+          <maml:Description>
+            <maml:para>Range of IPs separated by a hyphen (192.168.0.1-192.168.0.50)</maml:para>
+          </maml:Description>
+          <command:parameterValue required="true" variableLength="false">String</command:parameterValue>
+          <dev:type>
+            <maml:name>String</maml:name>
+            <maml:uri />
+          </dev:type>
+          <dev:defaultValue>None</dev:defaultValue>
+        </command:parameter>
+        <command:parameter required="true" variableLength="true" globbing="false" pipelineInput="False" position="1" aliases="none">
+          <maml:name>IPAddress</maml:name>
+          <maml:Description>
+            <maml:para>IPAddress in Dotted Decimal format</maml:para>
+          </maml:Description>
+          <command:parameterValue required="true" variableLength="false">IPAddress</command:parameterValue>
+          <dev:type>
+            <maml:name>IPAddress</maml:name>
+            <maml:uri />
+          </dev:type>
+          <dev:defaultValue>None</dev:defaultValue>
+        </command:parameter>
+      </command:syntaxItem>
+    </command:syntax>
+    <command:parameters>
+      <command:parameter required="true" variableLength="true" globbing="false" pipelineInput="False" position="1" aliases="none">
+        <maml:name>ContainedNetwork</maml:name>
+        <maml:Description>
+          <maml:para>CIDR network and mask length</maml:para>
+        </maml:Description>
+        <command:parameterValue required="true" variableLength="false">String</command:parameterValue>
+        <dev:type>
+          <maml:name>String</maml:name>
+          <maml:uri />
+        </dev:type>
+        <dev:defaultValue>None</dev:defaultValue>
+      </command:parameter>
+      <command:parameter required="true" variableLength="true" globbing="false" pipelineInput="False" position="0" aliases="none">
+        <maml:name>ContainingNetwork</maml:name>
+        <maml:Description>
+          <maml:para>CIDR network and mask length</maml:para>
+        </maml:Description>
+        <command:parameterValue required="true" variableLength="false">String</command:parameterValue>
+        <dev:type>
+          <maml:name>String</maml:name>
+          <maml:uri />
+        </dev:type>
+        <dev:defaultValue>None</dev:defaultValue>
+      </command:parameter>
+      <command:parameter required="true" variableLength="true" globbing="false" pipelineInput="False" position="1" aliases="none">
+        <maml:name>IPAddress</maml:name>
+        <maml:Description>
+          <maml:para>IPAddress in Dotted Decimal format</maml:para>
+        </maml:Description>
+        <command:parameterValue required="true" variableLength="false">IPAddress</command:parameterValue>
+        <dev:type>
+          <maml:name>IPAddress</maml:name>
+          <maml:uri />
+        </dev:type>
+        <dev:defaultValue>None</dev:defaultValue>
+      </command:parameter>
+      <command:parameter required="true" variableLength="true" globbing="false" pipelineInput="False" position="0" aliases="none">
+        <maml:name>IpRange</maml:name>
+        <maml:Description>
+          <maml:para>Range of IPs separated by a hyphen (192.168.0.1-192.168.0.50)</maml:para>
+        </maml:Description>
+        <command:parameterValue required="true" variableLength="false">String</command:parameterValue>
+        <dev:type>
+          <maml:name>String</maml:name>
+          <maml:uri />
+        </dev:type>
+        <dev:defaultValue>None</dev:defaultValue>
+      </command:parameter>
+    </command:parameters>
+    <command:inputTypes>
+      <command:inputType>
+        <dev:type>
+          <maml:name>None</maml:name>
+        </dev:type>
+        <maml:description>
+          <maml:para></maml:para>
+        </maml:description>
+      </command:inputType>
+    </command:inputTypes>
+    <command:returnValues>
+      <command:returnValue>
+        <dev:type>
+          <maml:name>System.Object</maml:name>
+        </dev:type>
+        <maml:description>
+          <maml:para></maml:para>
+        </maml:description>
+      </command:returnValue>
+    </command:returnValues>
+    <maml:alertSet>
+      <maml:alert>
+        <maml:para></maml:para>
+      </maml:alert>
+    </maml:alertSet>
+    <command:examples>
+      <command:example>
+        <maml:title>-------------------------- Example 1 --------------------------</maml:title>
+        <dev:code>PS C:\&gt;  Test-IpInRange -IpRange 192.168.0.0-192.168.0.50 -ContainedNetwork 192.168.0.0/30
+True</dev:code>
+        <dev:remarks>
+          <maml:para>Tests to see if 192.168.0.0/30 is contained by 192.168.0.0-192.168.0.50</maml:para>
+        </dev:remarks>
+      </command:example>
+      <command:example>
+        <maml:title>-------------------------- Example 2 --------------------------</maml:title>
+        <dev:code>PS C:\&gt;  Test-IpInRange -IpRange 192.168.0.0-192.168.0.50 -IPAddress 192.168.0.2
+True</dev:code>
+        <dev:remarks>
+          <maml:para>Tests to see if 192.168.0.2 is contained by 192.168.0.0-192.168.0.50</maml:para>
+        </dev:remarks>
+      </command:example>
+      <command:example>
+        <maml:title>-------------------------- Example 3 --------------------------</maml:title>
+        <dev:code>PS C:\&gt;  Test-IpInRange -ContainingNetwork 192.168.0.0/24 -ContainedNetwork 192.168.0.4/30
+True</dev:code>
+        <dev:remarks>
+          <maml:para>Tests to see if 192.168.0.4/30 is contained by 192.168.0.0/24</maml:para>
+        </dev:remarks>
+      </command:example>
+      <command:example>
+        <maml:title>-------------------------- Example 4 --------------------------</maml:title>
+        <dev:code>PS C:\&gt;  Test-IpInRange -ContainingNetwork 192.168.0.0/24 -IPAddress 192.168.0.50
+True</dev:code>
+        <dev:remarks>
+          <maml:para>Tests to see if 192.168.0.5 is contained by 192.168.0.0/24</maml:para>
+        </dev:remarks>
+      </command:example>
+    </command:examples>
+    <command:relatedLinks>
+      <maml:navigationLink>
+        <maml:linkText>Online Version:</maml:linkText>
+        <maml:uri>https://github.com/LockstepGroup/IPv4Math/blob/master/docs/Test-IpInRange.md</maml:uri>
+      </maml:navigationLink>
+      <maml:navigationLink>
+        <maml:linkText>https://github.com/LockstepGroup/IPv4Math</maml:linkText>
+        <maml:uri>https://github.com/LockstepGroup/IPv4Math</maml:uri>
+      </maml:navigationLink>
+      <maml:navigationLink>
+        <maml:linkText>https://www.powershellgallery.com/packages/IPv4Math</maml:linkText>
+        <maml:uri>https://www.powershellgallery.com/packages/IPv4Math</maml:uri>
+      </maml:navigationLink>
+    </command:relatedLinks>
+  </command:command>
+</helpItems>
