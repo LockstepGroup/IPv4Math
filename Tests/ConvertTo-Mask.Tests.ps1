@@ -14,12 +14,12 @@ InModuleScope $ENV:BHProjectName {
         $Verbose.add("Verbose", $True)
     }
 
-    Describe "ConvertTo-MaskLength" {
-        It "Should covert valid mask correctly" {
-            ConvertTo-MaskLength 255.255.128.0 | Should -BeExactly 17
+    Describe "ConvertTo-Mask" {
+        It "Should covert valid mask length correctly" {
+            ConvertTo-Mask 16 | Should -BeExactly '255.255.0.0'
         }
-        It "Should error out on invalid masks" {
-            { ConvertTo-MaskLength 255.255.0.128 } | Should -Throw
+        It "Should error out on invalid mask lengths" {
+            { ConvertTo-Mask 34 } | Should -Throw
         }
     }
 }
