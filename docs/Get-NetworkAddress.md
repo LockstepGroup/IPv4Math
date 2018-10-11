@@ -49,7 +49,7 @@ Returns the Network Address for a given IP Address and Subnet Mask.
 ## PARAMETERS
 
 ### -IPAddress
-Any IP address within the network range.
+IP Address in Dotted Decimal format
 
 ```yaml
 Type: IPAddress

@@ -7,9 +7,9 @@ Function ConvertTo-MaskLength {
     )
 
     Process {
-        
-        function IsValidMaskBits ($Bits) { 
-            $Bits = [convert]::ToString($Bits,2).PadLeft(8,'0')
+
+        function IsValidMaskBits ($Bits) {
+            $Bits = [convert]::ToString($Bits, 2).PadLeft(8, '0')
             $Bits = $Bits.ToCharArray()
             $ZeroFound = $false
             foreach ($b in $Bits) {
@@ -29,21 +29,19 @@ Function ConvertTo-MaskLength {
             }
             return $true
         }
-        
+
         foreach ($byte in $SubnetMask.GetAddressBytes()) {
             $IsValid = IsValidMaskBits $b
         }
-        
+
         if ($IsValid) {
             $MaskLength = ""
             foreach ($byte in $SubnetMask.GetAddressBytes()) {
-                Write-Verbose "byte: $byte"
-                Write-Verbose "lastbyte: $lastbyte"
                 if (($null -eq $lastbyte) -or ($byte -le $lastbyte)) {
                     $MaskLength += [Convert]::ToString($byte, 2) -replace '0'
                     $lastbyte = $byte
                 } else {
-                    Throw "Not a valid Subnet Mask"                    
+                    Throw "Not a valid Subnet Mask"
                 }
             }
         } else {
