@@ -14,9 +14,12 @@ InModuleScope $ENV:BHProjectName {
         $Verbose.add("Verbose", $True)
     }
 
-    Describe "ConvertTo-DecimalIP" {
-        It "Should convert correctly" {
-            ConvertTo-DecimalIP 192.168.0.1 | Should -BeExactly 3232235521
+    Describe "ConvertTo-MaskLength" {
+        It "Should covert valid mask correctly" {
+            ConvertTo-MaskLength 255.255.128.0 | Should -BeExactly 17
+        }
+        It "Should error out on invalid masks." {
+            { ConvertTo-MaskLength 255.255.0.128 } | Should -Throw
         }
     }
 }

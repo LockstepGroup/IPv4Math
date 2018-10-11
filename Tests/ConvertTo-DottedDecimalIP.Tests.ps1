@@ -15,7 +15,6 @@ InModuleScope $ENV:BHProjectName {
     }
 
     Describe "ConvertTo-DottedDecimalIP" {
-        Mock Get-Item { return @{Value = "macos"} } -ParameterFilter { $Path -eq 'env:os' }
         It "Should convert a Decimal IP correctly" {
             ConvertTo-DottedDecimalIP 3232235521 | Should -BeExactly '192.168.0.1'
         }
