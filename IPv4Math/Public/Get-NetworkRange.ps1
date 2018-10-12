@@ -12,6 +12,10 @@ Function Get-NetworkRange {
         [ValidatePattern('\b((25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\/(3[0-2]|2[0-9]|1[0-9]|[0-9])\b')]
         [string]$IpAndMaskLength,
 
+        [Parameter(Mandatory = $false, ParameterSetName = 'ipandmask')]
+        [Parameter(Mandatory = $false, ParameterSetName = 'ipandmasklength')]
+        [switch]$IncludeNetworkAndBroadcastIp,
+
         [Parameter(Mandatory = $True, Position = 0, ParameterSetName = 'iprange')]
         [string]$IpRange
     )
@@ -22,13 +26,21 @@ Function Get-NetworkRange {
                 $IPAddress = ($IpAndMaskLength.Split('/'))[0]
                 $MaskLength = ($IpAndMaskLength.Split('/'))[1]
                 $SubnetMask = ConvertTo-Mask $MaskLength
-                $StartIp = (Get-NetworkAddress -IPAddress $IPAddress -SubnetMask $SubnetMask | ConvertTo-DecimalIP) + 1
-                $StopIp = (Get-BroadcastAddress -IPAddress $IPAddress -SubnetMask $SubnetMask | ConvertTo-DecimalIP) - 1
+                $StartIp = (Get-NetworkAddress -IPAddress $IPAddress -SubnetMask $SubnetMask | ConvertTo-DecimalIP)
+                $StopIp = (Get-BroadcastAddress -IPAddress $IPAddress -SubnetMask $SubnetMask | ConvertTo-DecimalIP)
+                if (!($IncludeNetworkAndBroadcastIp)) {
+                    $StartIp++
+                    $StopIp--
+                }
                 break
             }
             'ipandmask' {
-                $StartIp = (Get-NetworkAddress -IPAddress $IPAddress -SubnetMask $SubnetMask | ConvertTo-DecimalIP) + 1
-                $StopIp = (Get-BroadcastAddress -IPAddress $IPAddress -SubnetMask $SubnetMask | ConvertTo-DecimalIP) - 1
+                $StartIp = (Get-NetworkAddress -IPAddress $IPAddress -SubnetMask $SubnetMask | ConvertTo-DecimalIP)
+                $StopIp = (Get-BroadcastAddress -IPAddress $IPAddress -SubnetMask $SubnetMask | ConvertTo-DecimalIP)
+                if (!($IncludeNetworkAndBroadcastIp)) {
+                    $StartIp++
+                    $StopIp--
+                }
                 break
             }
             'iprange' {
