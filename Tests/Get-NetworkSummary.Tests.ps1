@@ -16,7 +16,10 @@ InModuleScope $ENV:BHProjectName {
 
     Describe "Get-NetworkSummary" {
         Context "IPAddress/SubnetMask" {
-            $NetworkSummary = Get-NetworkSummary -IPAddress 192.168.0.1 -SubnetMask 255.255.255.0
+            BeforeAll {
+                $NetworkSummary = Get-NetworkSummary -IPAddress 192.168.0.1 -SubnetMask 255.255.255.0
+            }
+
             It "Should return correct Network for IPAddress/SubnetMask" {
                 $NetworkSummary.Network | Should -BeExactly '192.168.0.0'
             }
@@ -49,7 +52,10 @@ InModuleScope $ENV:BHProjectName {
             }
         }
         Context "IPAddress/SubnetMask" {
-            $NetworkSummary = Get-NetworkSummary -IpAndMaskLength 192.168.0.1/24
+            BeforeAll {
+                $NetworkSummary = Get-NetworkSummary -IpAndMaskLength 192.168.0.1/24
+            }
+
             It "Should return correct Network for IPAddress/SubnetMask" {
                 $NetworkSummary.Network | Should -BeExactly '192.168.0.0'
             }
@@ -82,16 +88,16 @@ InModuleScope $ENV:BHProjectName {
             }
         }
         Context "IP Classes" {
-            $NetworkSummary = Get-NetworkSummary -IpAndMaskLength 192.168.0.1/24
             It "Should be Class C Network" {
+                $NetworkSummary = Get-NetworkSummary -IpAndMaskLength 192.168.0.1/24
                 $NetworkSummary.Class | Should -BeExactly 'C'
             }
-            $NetworkSummary = Get-NetworkSummary -IpAndMaskLength 172.16.0.0/12
             It "Should be Class B Network" {
+                $NetworkSummary = Get-NetworkSummary -IpAndMaskLength 172.16.0.0/12
                 $NetworkSummary.Class | Should -BeExactly 'B'
             }
-            $NetworkSummary = Get-NetworkSummary -IpAndMaskLength 10.10.10.0/24
             It "Should be Class A Network" {
+                $NetworkSummary = Get-NetworkSummary -IpAndMaskLength 10.10.10.0/24
                 $NetworkSummary.Class | Should -BeExactly 'A'
             }
         }
